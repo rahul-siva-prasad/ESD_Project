@@ -1,0 +1,21 @@
+{
+    "cmsis-csolution.actions": [
+        {
+            "path": "esd_project.csolution.yml",
+            "target": "Target_1",
+            "projects": [
+                {
+                    "path": "esd_project.cproject.yml",
+                    "config": {
+                        "run": "Flash Device",
+                        "debug": "Arm Debugger"
+                    }
+                }
+            ],
+            "config": {
+                "run": "Flash Device",
+                "debug": "Arm Debugger"
+            }
+        }
+    ]
+}

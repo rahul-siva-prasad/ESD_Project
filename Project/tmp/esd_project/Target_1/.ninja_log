@@ -1,0 +1,13 @@
+# ninja log v5
+0	44	0	CMakeFiles/database	f21bdd7478330088
+18	181	7328609132590284	CMakeFiles/esd_project.dir/C_/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/SysClockConfig.o	6fb0d47dcd1c5607
+0	44	0	C:/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/tmp/esd_project/Target_1/CMakeFiles/database	f21bdd7478330088
+1	101	7328610808814838	CMakeFiles/esd_project.dir/C_/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/Oximeter.o	9872dfa098d80241
+1	129	7328609132115626	CMakeFiles/esd_project.dir/C_/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/RTE/Device/STM32F407VGTx/startup_stm32f407xx.o	bb170341efdc656b
+22	183	7328609132602620	CMakeFiles/esd_project.dir/C_/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/UART_Config.o	570d2c4b05385f8
+11	184	7328609132612973	CMakeFiles/esd_project.dir/C_/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/RTE/Device/STM32F407VGTx/system_stm32f4xx.o	4eee644bd5b6f6ec
+132	204	7328610809844418	C:/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/out/esd_project/Target_1/esd_project.axf	326e9c656d980652
+5	221	7328609132945225	CMakeFiles/esd_project.dir/C_/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/I2C_Config.o	4602fe61999f49ec
+5	132	7328610809107960	CMakeFiles/esd_project.dir/C_/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/main.o	4c6d4dffd2881e2d
+1	43	0	CMakeFiles/database	f21bdd7478330088
+1	43	0	C:/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/tmp/esd_project/Target_1/CMakeFiles/database	f21bdd7478330088

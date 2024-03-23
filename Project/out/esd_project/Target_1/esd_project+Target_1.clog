@@ -1,0 +1,17 @@
+# CMSIS Build Audit File generated on 2024-03-23T07:08:21
+
+# Project Description File: c:/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/esd_project+Target_1.cprj
+
+# Toolchain Configuration File: C:/Users/User-PC/.vcpkg/artifacts/2139c4c6/tools.open.cmsis.pack.cmsis.toolbox/2.2.1/etc/AC6.6.18.0.cmake
+
+# Package: ARM::CMSIS@5.9.0
+  Location: C:\Users\User-PC\AppData\Local\arm\packs/ARM/CMSIS/5.9.0/
+
+  * Component: ARM::CMSIS:CORE@5.6.0
+
+# Package: Keil::STM32F4xx_DFP@2.17.0
+  Location: C:\Users\User-PC\AppData\Local\arm\packs/Keil/STM32F4xx_DFP/2.17.0/
+
+  * Component: Keil::Device:Startup@2.6.3
+    - ConfigFile: c:/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/RTE/Device/STM32F407VGTx/startup_stm32f407xx.s:2.6.8
+    - ConfigFile: c:/Users/User-PC/Desktop/ESD_main/ESD_Project/Project/RTE/Device/STM32F407VGTx/system_stm32f4xx.c:2.6.8

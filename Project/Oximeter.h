@@ -26,7 +26,7 @@ void OXY_Write(uint8_t Address,uint8_t Reg,uint8_t Data);
 void OXY_Read(uint8_t Address,uint8_t Reg,uint8_t *buffer,uint8_t size);
 void OXY_Init(void);
 void OXY_FIFO_reset(void);
-
+void OXY_Interrupt(void);
 typedef enum{ // This is the same for both LEDs
   pw200,    // 200us pulse
   pw400,    // 400us pulse
