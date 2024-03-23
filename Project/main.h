@@ -1,11 +1,8 @@
-#include "stm32f407xx.h"
 #include "SysClockConfig.h"
 #include "UART_Config.h"
 #include "I2C_Config.h"
 #include "Oximeter.h"
 #include <stdbool.h>
-#include <stdio.h>
-#include <string.h>
 #include <stdint.h>
 
 

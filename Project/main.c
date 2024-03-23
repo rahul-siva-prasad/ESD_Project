@@ -61,14 +61,14 @@ void EXTI1_IRQHandler(void)
 void TIM2_Initialize (void)
 {
 	const uint16_t PSC_val =  8400; //prescalar value
-  const uint16_t ARR_val= 	1000; //ARR value 1sec
+  	const uint16_t ARR_val= 	1000; //ARR value 1sec
 	RCC->APB1ENR|=(1UL<<0);
-  TIM2->PSC=PSC_val-1;
+  	TIM2->PSC=PSC_val-1;
 	TIM2->ARR=ARR_val-1;//
 	TIM2->DIER=(1UL<<0);
 	TIM2->CR1=(1UL<<0);//set command register 
 	TIM2->CCMR1|=(3UL<<12);//OCIREF toggles which serves as trigger for ADC
-  TIM2->CCER|=(1UL<<4);//CC2E set// refer programmers manual
+  	TIM2->CCER|=(1UL<<4);//CC2E set// refer programmers manual
 	NVIC_SetPriority(TIM2_IRQn,2);
 	NVIC_EnableIRQ(TIM2_IRQn);
 }
@@ -98,7 +98,7 @@ void ADC_Initialize(void)
 	ADC3->SMPR1=   0;       
 	ADC3->SMPR2= (7UL<<3*5);//time=480 cycles         
 	ADC3->CR2 &=~(2U); //Single conversion mode  
-  ADC3->CR2|=3UL<<28;	//RISING AND FALLING EDGE DETECTION
+  	ADC3->CR2|=3UL<<28;	//RISING AND FALLING EDGE DETECTION
 	ADC3->CR2|=3UL<<24;	//Timer 2 - CC2
 	ADC3->CR1|=(1UL<<5);//Enable EOC IRQ
 	ADC3->CR1 |=(1UL<<24); //10bit ADC
