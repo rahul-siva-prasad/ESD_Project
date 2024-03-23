@@ -1,0 +1,9 @@
+build-idx:
+  generated-by: csolution version 2.2.1
+  csolution: esd_project.csolution.yml
+  cprojects:
+    - cproject: esd_project.cproject.yml
+  cbuilds:
+    - cbuild: esd_project+Target_1.cbuild.yml
+      project: esd_project
+      configuration: +Target_1

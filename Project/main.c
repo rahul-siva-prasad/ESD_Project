@@ -42,8 +42,8 @@ void EXTI1_IRQHandler(void)
 		{
 			uint8_t temp[4]={0};  // Temporary buffer for read values
 			OXY_Read(MAX30100, MAX30100_FIFO_DATA,temp, 4);  // Read four times from the FIFO
-			IR = (temp[0]<<8) | temp[1];    // Combine values to get the actual number
-			RED = (temp[2]<<8) | temp[3];   // Combine values to get the actual number
+			IR = (float)((temp[0]<<8) | temp[1]);    // Combine values to get the actual number
+			RED = (float)((temp[2]<<8) | temp[3]);   // Combine values to get the actual number
 			count=0;
 			if(RED+IR > 5000)
 			{

@@ -1,0 +1,62 @@
+project:
+  packs:
+    - pack: Keil::STM32F4xx_DFP
+    - pack: ARM::CMSIS@5.9.0
+  setups:
+    - setup: Options for Target_1
+      processor:
+        fpu: sp
+      debug: "on"
+      misc:
+        - C:
+            - -std=c99
+          C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -Weverything
+            - -Wno-packed
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+          CPP:
+            - -xc++
+            - -std=c++98
+          ASM:
+            - -masm=auto
+          Link:
+            - --map
+            - --load_addr_map_info
+            - --xref
+            - --callgraph
+            - --symbols
+            - --info sizes
+            - --info totals
+            - --info unused
+            - --info veneers
+            - --strict
+            - --summary_stderr
+            - --info summarysizes
+  linker:
+    - script: esd_project_Target_1.sct
+  groups:
+    - group: Source Group 1
+      files:
+        - file: main.c
+        - file: main.h
+        - file: SysClockConfig.c
+        - file: SysClockConfig.h
+        - file: UART_Config.c
+        - file: UART_Config.h
+        - file: I2C_Config.c
+        - file: I2C_Config.h
+        - file: Oximeter.c
+        - file: Oximeter.h
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Keil::Device:Startup

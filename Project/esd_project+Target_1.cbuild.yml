@@ -1,0 +1,137 @@
+build:
+  generated-by: csolution version 2.2.1
+  solution: esd_project.csolution.yml
+  project: esd_project.cproject.yml
+  context: esd_project+Target_1
+  compiler: AC6
+  device: STM32F407VGTx
+  device-pack: Keil::STM32F4xx_DFP@2.17.0
+  processor:
+    endian: little
+    fpu: sp
+    core: Cortex-M4
+  packs:
+    - pack: ARM::CMSIS@5.9.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0
+    - pack: Keil::STM32F4xx_DFP@2.17.0
+      path: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.0
+  optimize: none
+  debug: on
+  misc:
+    ASM:
+      - -masm=auto
+    C:
+      - -std=c99
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Weverything
+      - -Wno-packed
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    CPP:
+      - -xc++
+      - -std=c++98
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Weverything
+      - -Wno-packed
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    Link:
+      - --map
+      - --load_addr_map_info
+      - --xref
+      - --callgraph
+      - --symbols
+      - --info sizes
+      - --info totals
+      - --info unused
+      - --info veneers
+      - --strict
+      - --summary_stderr
+      - --info summarysizes
+  define:
+    - STM32F407xx
+    - _RTE_
+  add-path:
+    - RTE/_Target_1
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  output-dirs:
+    intdir: tmp/esd_project/Target_1
+    outdir: out/esd_project/Target_1
+    rtedir: RTE
+  output:
+    - type: elf
+      file: esd_project.axf
+  components:
+    - component: ARM::CMSIS:CORE@5.6.0
+      condition: ARMv6_7_8-M Device
+      from-pack: ARM::CMSIS@5.9.0
+      selected-by: ARM::CMSIS:CORE
+    - component: Keil::Device:Startup@2.6.3
+      condition: STM32F4 CMSIS
+      from-pack: Keil::STM32F4xx_DFP@2.17.0
+      selected-by: Keil::Device:Startup
+      files:
+        - file: RTE/Device/STM32F407VGTx/startup_stm32f407xx.s
+          category: source
+          attr: config
+          version: 2.6.8
+        - file: RTE/Device/STM32F407VGTx/system_stm32f4xx.c
+          category: source
+          attr: config
+          version: 2.6.8
+  linker:
+    script: esd_project_Target_1.sct
+  groups:
+    - group: Source Group 1
+      files:
+        - file: main.c
+          category: sourceC
+        - file: main.h
+          category: header
+        - file: SysClockConfig.c
+          category: sourceC
+        - file: SysClockConfig.h
+          category: header
+        - file: UART_Config.c
+          category: sourceC
+        - file: UART_Config.h
+          category: header
+        - file: I2C_Config.c
+          category: sourceC
+        - file: I2C_Config.h
+          category: header
+        - file: Oximeter.c
+          category: sourceC
+        - file: Oximeter.h
+          category: header
+  constructed-files:
+    - file: RTE/_Target_1/RTE_Components.h
+      category: header
+  licenses:
+    - license: <unknown>
+      packs:
+        - pack: ARM::CMSIS@5.9.0
+      components:
+        - component: ARM::CMSIS:CORE@5.6.0
+    - license: <unknown>
+      packs:
+        - pack: Keil::STM32F4xx_DFP@2.17.0
+      components:
+        - component: Keil::Device:Startup@2.6.3
