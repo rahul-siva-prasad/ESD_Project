@@ -30,5 +30,8 @@ void UART2_SendChar(uint8_t c)
 }
 void UART2_SendString(char *string)
 {
-	while(*string)UART2_SendChar(*string++);
+	while(*string){
+		UART2_SendChar(*string);
+		string+=1;
+	}
 }
